@@ -197,7 +197,7 @@ angular.module('MDC')
       //var url = "/home";
       //$location.path(url);
       var data = LoginService.logout().then(function(res) {
-        window.location.href="/";
+        $location.path(view);="/";
       }, function(res) {
         console.log(res);
       });
@@ -205,7 +205,7 @@ angular.module('MDC')
     
     $scope.goHistory = function() {
       var url = "/history";
-      window.location.href=url;
+      $location.path(view);=url;
     };
     // -----------------------------------------------
     // Logged User
